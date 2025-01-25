@@ -1,0 +1,240 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9fb;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header {
+    background: linear-gradient(90deg, #0056b3, #0073e6);
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: #ffcc00;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 20px;
+  }
+  
+  /* Sidebar (Filter Section) */
+  aside#filter-sidebar {
+    width: 25%;
+    background: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  aside h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+    border-left: 4px solid #0073e6;
+    padding-left: 10px;
+  }
+  
+  aside form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  aside form label {
+    font-weight: 500;
+    margin: 10px 0 5px;
+    color: #555;
+  }
+  
+  aside form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  aside form button {
+    background: linear-gradient(90deg, #28a745, #218838);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  aside form button:hover {
+    background: linear-gradient(90deg, #218838, #1c7430);
+    transform: translateY(-2px);
+  }
+  
+  /* Job Listings */
+  section#job-listings {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+  }
+  
+  h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #0073e6;
+    margin: 5px auto 0;
+  }
+  
+  /* Job Container */
+  .job-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .job {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .job:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  .job::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 115, 230, 0.05), rgba(255, 255, 255, 0.1));
+    z-index: 0;
+  }
+  
+  .job h3 {
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: #007bff;
+    text-align: left;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .job p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .apply-btn {
+    background: linear-gradient(90deg, #0073e6, #0056b3);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    transition: background 0.3s ease;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .apply-btn:hover {
+    background: linear-gradient(90deg, #0056b3, #003e7e);
+  }
+  
+  /* Footer Section */
+  #contact {
+    text-align: center;
+    background: #0073e6;
+    color: white;
+    padding: 10px 0;
+    margin-top: 20px;
+  }
+  
+  #contact p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .job-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    aside#filter-sidebar {
+      width: 30%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .job-container {
+      grid-template-columns: 1fr;
+    }
+  
+    aside#filter-sidebar {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+  

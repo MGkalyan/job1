@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Portal & Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <header>
+    <nav>
+      <h1>Job Portal</h1>
+      <ul>
+        <li><a href="#job-listings">Jobs</a></li>
+        <li><a href="resume.html">Resume Builder</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+ 
+    <aside id="filter-sidebar">
+      <h3>Filter Jobs</h3>
+      <form id="filter-form">
+        <label for="job-title">Job Title:</label>
+        <input type="text" id="job-title" placeholder="e.g., Developer">
+
+        <label for="job-location">Location:</label>
+        <input type="text" id="job-location" placeholder="e.g., Remote, New York">
+
+        <label for="company">Company:</label>
+        <input type="text" id="company" placeholder="e.g., DataCorp">
+
+        <button type="button" id="filter-btn">Apply Filters</button>
+      </form>
+    </aside>
+
+    <section id="job-listings">
+        <h2>Available Jobs</h2>
+        <div class="job-container">
+          <div class="job" data-title="Software Developer" data-location="Remote" data-company="Tech Solutions">
+            <h3>Software Developer</h3>
+            <p>Company:TATA consultancy services</p>
+            <p>Location: gujarat</p>
+            <button class="apply-btn">Apply</button>
+          </div>
+          <div class="job" data-title="Data Analyst" data-location="New York" data-company="DataCorp">
+            <h3>Data Analyst</h3>
+            <p>Company:wipro technologies</p>
+            <p>Location: new delhi </p>
+            <button class="apply-btn">Apply</button>
+          </div>
+          <div class="job" data-title="UI/UX Designer" data-location="San Francisco" data-company="CreativeWorks">
+            <h3>UI/UX Designer</h3>
+            <p>Company: infosys technologies limited</p>
+            <p>Location:andhra pradesh</p>
+            <button class="apply-btn">Apply</button>
+          </div>
+          <div class="job" data-title="Frontend Developer" data-location="Austin" data-company="Innovatech">
+            <h3>Frontend Developer</h3>
+            <p>Company: infotech limited</p>
+            <p>Location: telangana</p>
+            <button class="apply-btn">Apply</button>
+          </div>
+          <div class="job" data-title="Backend Developer" data-location="Chicago" data-company="CodeCrafters">
+            <h3>Backend Developer</h3>
+            <p>Company: IBM india limited</p>
+            <p>Location: bangalore</p>
+            <button class="apply-btn">Apply</button>
+          </div>
+          <div class="job" data-title="Cloud Engineer" data-location="Seattle" data-company="Cloudify">
+            <h3>Cloud Engineer</h3>
+            <p>Company:amazon</p>
+            <p>Location: bombay</p>
+            <button class="apply-btn">Apply</button>
+          </div>
+          
+        </div>
+      </section>
+      
+      
+  </main>
+
+ 
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@jobportal.com</p>
+    <p>Phone: 987654567890</p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
